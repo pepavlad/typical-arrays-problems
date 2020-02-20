@@ -1,12 +1,19 @@
 
 exports.min = function min (array) {
-  return 0;
+  if (!array || !array.length) return [];
+  return Math.min(...array);
 }
 
 exports.max = function max (array) {
-  return 0;
+  if (!array || !array.length) return [];
+  return Math.max(...array);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (!array || !array.length) return [];
+  let result = 0;
+  array.forEach(element => {
+    result +=element;  
+  });
+  return result/array.length;
 }
